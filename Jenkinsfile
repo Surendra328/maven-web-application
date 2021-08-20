@@ -1,5 +1,3 @@
-## Groovy
-
 node
 {
 
