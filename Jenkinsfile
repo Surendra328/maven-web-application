@@ -12,7 +12,7 @@ def mavenHome = tool name: "Maven 3.6.3"
  {
   sh "${mavenHome}/bin/mvn clean package"
   }
- \*stage('Execute sonarqube report')
+ /*stage('Execute sonarqube report')
  {
  sh "${mavenHome}/bin/mvn sonar:sonar"
  }
