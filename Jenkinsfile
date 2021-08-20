@@ -14,7 +14,7 @@ def mavenHome = tool name: "Maven 3.6.3"
  {
   sh "${mavenHome}/bin/mvn clean package"
   }
- stage('Execute sonarqube report')
+ \*stage('Execute sonarqube report')
  {
  sh "${mavenHome}/bin/mvn sonar:sonar"
  }
@@ -29,7 +29,7 @@ def mavenHome = tool name: "Maven 3.6.3"
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.235.9.170:/opt/apache-tomcat-8.5.70/webapps"
 }
   
- }
+ }*/
  stage('Send email notification')
  {
  mail bcc: '', body: 'Build over', cc: '', from: '', replyTo: '', subject: 'Build over', to: 'galisaisurendra2511@gmail.com'
